@@ -27,4 +27,4 @@
 ![All your saved notes](./screenshots/7_allnotes.png)
 
 ### To delete a note, press the delete button on the right of the title display
-![delete button](./8_delete.png)
+![delete button](./screenshots/8_delete.png)
