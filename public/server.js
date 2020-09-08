@@ -9,6 +9,16 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('../public'))
 app.use(express.json());
 
+app.post("/api/notes", (req, res) => {
+    var newNote = req.body;
+
+    var noteArray = JSON.parse(fs.readFileSync(path.join(__dirname, "../db/db.json")));
+    noteArray.push(newNote);
+
+    var reformattedData = JSON.stringify(noteArray);
+    fs.writeFileSync(path.join(__dirname, "../db/db.json"), reformattedData);
+});
+
 app.get("/api/notes", (req, res) => {
     res.sendFile(path.join(__dirname, "../db/db.json"));
 });
