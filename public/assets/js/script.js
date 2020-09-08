@@ -1,3 +1,4 @@
+//gets these from index.html
 const $noteTitle = $(".note-title");
 const $noteText = $(".note-textarea");
 const $saveNoteBtn = $(".save-note");
@@ -137,6 +138,7 @@ const renderNoteList = (notes) => {
 
 // Gets notes from the db and renders them to the sidebar
 const getAndRenderNotes = () => {
+  
   return getNotes().then(renderNoteList);
 };
 
