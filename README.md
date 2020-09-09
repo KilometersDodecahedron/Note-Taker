@@ -2,7 +2,7 @@
 
 ### This application runs in your browser, and allows you to create and save notes for yourself
 
-[Click here to use the app](https://pure-scrubland-23951.herokuapp.com/notes)
+[Click here to use the app](https://pure-scrubland-23951.herokuapp.com)
 
 ### When you first start the app, you'll be greeted with this image
 ![title](./screenshots/1_title.png)
