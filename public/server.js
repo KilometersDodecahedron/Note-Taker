@@ -6,7 +6,7 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static('../public'))
+app.use(express.static(__dirname));
 app.use(express.json());
 
 app.delete("/api/notes/:id", (req, res) => {
@@ -18,7 +18,7 @@ app.delete("/api/notes/:id", (req, res) => {
         if(value.id != id){
             return value;
         }
-    })
+    });
 
     var reformattedData = JSON.stringify(noteArray);
     fs.writeFileSync(path.join(__dirname, "../db/db.json"), reformattedData);
